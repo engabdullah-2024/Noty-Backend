@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const noteRouter = require('./routes/NoteRouter'); // Assuming you have a NoteRouter.js file
+const userRouter = require('./routes/UserRouter'); // Assuming you have a NoteRouter.js file
 const mongoose = require('mongoose');
 
 const app = express();
@@ -12,6 +13,7 @@ app.use(express.json()); // Parse JSON bodies
 
 // Routes
 app.use(noteRouter, );
+app.use(userRouter, );
 
 // Connect to MongoDB
 mongoose.connect("mongodb://localhost:27017/NotyApp").then(() =>{
