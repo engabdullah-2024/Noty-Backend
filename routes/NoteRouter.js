@@ -38,7 +38,7 @@ router.put("/note/update/:id" ,  async(req, res) =>{
         {$set: req.body}
     )
     if(updateData){
-        res.send("Result has been successfully updated")
+        res.send("Note has been successfully updated")
     }
 })
 
